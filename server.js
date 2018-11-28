@@ -45,6 +45,13 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Projects Page',
+		portfolioProjects: 'Projects are here yo'
+	});
+});
+
 app.get('/bad', (req, res) => {
 	res.send({errorMessage: 'Failed son'})
 });
